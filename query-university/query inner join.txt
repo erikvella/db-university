@@ -10,9 +10,9 @@ SELECT `courses`.* FROM `courses` INNER JOIN `degrees` ON `courses`.`degree_id` 
 
 SELECT `courses`.* FROM `courses` INNER JOIN `course_teacher` ON `courses`.`id` = `course_teacher`.`course_id` INNER JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id` WHERE `teachers`.`name` = 'fulvio' AND `teachers`.`surname` = 'amato';
 
-4. Selezionare tutti gli studenti relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome /////////////
+4. Selezionare tutti gli studenti relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome 
 
-SELECT `students`.* FROM `students` INNER JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id` INNER JOIN `departments` ON `degrees`.`department_id` = `departments`.`id` ORDER BY `students`.`surname`;                      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+SELECT `students`.* FROM `students` INNER JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id` INNER JOIN `departments` ON `degrees`.`department_id` = `departments`.`id` ORDER BY `students`.`surname`;                      
 
 5. Selezionare tutti i corsi di laurea con relativi corsi e insegnanti
 
